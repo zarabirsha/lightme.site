@@ -50,7 +50,7 @@ h6, .apertures, .shutterspeeds {
    float: left;
    color: #333333;
    margin-left: 14vw;
-   padding: 10vh 4vmin;
+   padding: 10vh 2vmin;
    text-align: left;
 }
 
@@ -61,7 +61,7 @@ h6, .apertures, .shutterspeeds {
    }
 
    .shutterspeeds {
-      padding-left: 4vmin;
+      padding-left: 2vmin;
    }
 }
 
