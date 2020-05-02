@@ -3,9 +3,10 @@ body {
    height: 100%;
    background-color: #e0e0e0;
 }
-h6{
-   margin:0;
-   padding:0;
+
+h6 {
+   margin: 0;
+   padding: 0;
 }
 
 .wrapper {
@@ -37,7 +38,7 @@ h6{
    transform: translateY(-50%);
 }
 
-h6,.apertures, .shutterspeeds {
+h6, .apertures, .shutterspeeds {
    font-size: 2.2vh;
    font-weight: bold;
    font-family: ui-sans-serif;
@@ -48,12 +49,12 @@ h6,.apertures, .shutterspeeds {
    float: left;
    color: #333333;
    margin-left: 14vw;
-   padding: 10vh 2vmin;
+   padding: 10vh 4vmin;
    text-align: left;
 }
 
 @media screen and (min-device-width:768px) {
-   h6,.apertures, .shutterspeeds {
+   h6, .apertures, .shutterspeeds {
       font-weight: 400;
       font-size: 2vh;
    }
@@ -63,8 +64,8 @@ h6,.apertures, .shutterspeeds {
    }
 }
 
-.dark-gold{
-   color : #BE966E;
+.dark-gold {
+   color: #BE966E;
 }
 
 h1 {
@@ -85,9 +86,7 @@ h1.me {
 
 @media screen and (min-device-width:768px) {
    h1 {
-
       font-size: 10vmin;
-
    }
 }
 
