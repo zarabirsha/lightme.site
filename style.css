@@ -61,7 +61,7 @@ h6, .apertures, .shutterspeeds {
    }
 
    .shutterspeeds {
-      padding-left: 2vmin;
+      padding-left: 4vmin;
    }
 }
 
@@ -93,7 +93,7 @@ h1.me {
 
 @media screen and (min-device-width:1024px) {
    .shutterspeeds {
-      padding-left: 4vmin;
+      padding-left: 2vmin;
    }
 }
 
