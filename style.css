@@ -34,7 +34,8 @@ body {
 }
 
 .apertures, .shutterspeeds {
-   font-size: 3vh;
+   font-size: 2vh;
+   font-weight: bold;
    font-family: ui-sans-serif;
 }
 
@@ -49,6 +50,7 @@ body {
 
 @media screen and (min-device-width:768px) {
    .apertures, .shutterspeeds {
+      font-weight: 400;
       font-size: 2vh;
    }
 
