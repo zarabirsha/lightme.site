@@ -7,6 +7,7 @@ h6{
    margin:0;
    padding:0;
 }
+
 .wrapper {
    width: 100%;
    display: grid;
@@ -68,7 +69,7 @@ h6,.apertures, .shutterspeeds {
 
 h1 {
    margin: auto;
-   font-size: 10vmin;
+   font-size: 20vmin;
    font-family: sans-serif;
    color: #333333
 }
@@ -80,6 +81,14 @@ h1.light {
 h1.me {
    color: white;
    float: left;
+}
+
+@media screen and (min-device-width:768px) {
+   h1 {
+
+      font-size: 10vmin;
+
+   }
 }
 
 .content {
