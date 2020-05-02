@@ -27,12 +27,15 @@ body {
 }
 
 .apertures {
-   font-size: 5vmin;
    color: #e0e0e0;
-   font-family: ui-sans-serif;
    position: relative;
    top: 50%;
    transform: translateY(-50%);
+}
+
+.apertures, .shutterspeeds {
+   font-size: 3vh;
+   font-family: ui-sans-serif;
 }
 
 .shutterspeeds {
@@ -40,8 +43,6 @@ body {
    float: left;
    color: #333333;
    margin-left: 14vw;
-   font-family: ui-sans-serif;
-   font-size: 5vmin;
    padding: 10vh 2vmin;
    text-align: left;
 }
@@ -55,8 +56,6 @@ body {
       padding-left: 2vmin;
    }
 }
-
-
 
 h1 {
    margin: auto;
