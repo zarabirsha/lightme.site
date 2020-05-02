@@ -27,7 +27,7 @@ body {
 }
 
 .apertures {
-   font-size: 2.5vmin;
+   font-size: 5vmin;
    color: #e0e0e0;
    font-family: ui-sans-serif;
    position: relative;
@@ -41,12 +41,12 @@ body {
    color: #333333;
    margin-left: 14vw;
    font-family: ui-sans-serif;
-   font-size: 2.5vmin;
+   font-size: 5vmin;
    padding: 10vh 2vmin;
    text-align: left;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (min-device-width:768px) {
    .apertures, .shutterspeeds {
       font-size: 2vh;
    }
@@ -55,6 +55,8 @@ body {
       padding-left: 2vmin;
    }
 }
+
+
 
 h1 {
    margin: auto;
