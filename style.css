@@ -98,9 +98,10 @@ h1.me {
 }
 
 .content {
+   margin-left:  auto;
+   margin-right: auto;
    padding-top: 10vmin;
    text-align: center;
    grid-column: 2;
-   position: relative;
-   left: 10vw;
+
 }
