@@ -14,7 +14,7 @@ h6 {
    display: grid;
    grid-template-columns: 2fr 5fr;
    grid-gap: 0px;
-   height: 120vh;
+
    background-color: #e0e0e0;
    grid-template-rows: 1fr;
 }
@@ -22,7 +22,7 @@ h6 {
 .apertures-wrapper {
    grid-column: 1;
    padding: 0 1vmin;
-   height: 100vh;
+   height: 120vh;
    background-color: #333333;
    box-shadow: -2px 0px 20px black;
    text-align: right;
