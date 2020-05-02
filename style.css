@@ -22,7 +22,7 @@ h6 {
 .apertures-wrapper {
    grid-column: 1;
    padding: 0 1vmin;
-   height: 120vh;
+   height: 110vh;
    background-color: #333333;
    box-shadow: -2px 0px 20px black;
    text-align: right;
