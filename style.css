@@ -91,6 +91,12 @@ h1.me {
    }
 }
 
+@media screen and (min-device-width:1024px) {
+   .shutterspeeds {
+      padding-left: 4vmin;
+   }
+}
+
 .content {
    padding-top: 10vmin;
    text-align: center;
