@@ -22,7 +22,7 @@ h6{
    padding: 0 1vmin;
    height: 100vh;
    background-color: #333333;
-   box-shadow: -5px 0px 20px black;
+   box-shadow: -2px 0px 20px black;
    text-align: right;
    position: fixed;
    left: 0;
@@ -95,6 +95,6 @@ h1.me {
    padding-top: 10vmin;
    text-align: center;
    grid-column: 2;
-   position: absolute;
-   left: 40vw;
+   position: relative;
+   left: 10vw;
 }
