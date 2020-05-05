@@ -12,11 +12,11 @@ h6 {
 .wrapper {
    width: 100%;
    display: grid;
-   grid-template-columns: 2fr 5fr;
+   grid-template-columns: 1fr 5fr;
    grid-gap: 0px;
 
    background-color: #e0e0e0;
-   grid-template-rows: 1fr;
+
 }
 
 .apertures-wrapper {
@@ -68,6 +68,7 @@ h6, .apertures, .shutterspeeds {
 }
 
 .dark-gold {
+   font-weight: 400;
    color: #BE966E;
 }
 
@@ -95,7 +96,7 @@ h1.me {
 
 @media screen and (min-device-width:1024px) {
    .shutterspeeds {
-      padding-left: 2vmin;
+      padding-left: 1vmin;
    }
    .shutterspeeds,.apertures{
       font-weight: 400;
@@ -109,4 +110,18 @@ h1.me {
    text-align: center;
    grid-column: 2;
 
+}
+
+button{
+   background: #333333;
+   padding:10px;
+
+   margin: 5vmin 1vmin;
+   color: #e0e0e0;
+   border-width: 0;
+   border-radius: 10px;
+}
+button h3{
+   padding: 0;
+   margin:0;
 }
