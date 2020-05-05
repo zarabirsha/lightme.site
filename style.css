@@ -146,6 +146,17 @@ div.title {
    padding: 10px 15px;
 }
 
+@media screen and (max-device-width:768px) {
+   .button {
+      font-size: 2vmin;
+
+
+   }
+
+
+}
+
+
 .button:hover {
    color: #e0e0e0;
    background-color: #383838;
