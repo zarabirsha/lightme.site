@@ -4,10 +4,33 @@
 <head>
    <meta charset="utf-8">
    <title>Lightme</title>
+   <meta name="viewport" content="user-scalable=no" />
+
    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
+<body ontouchstart="" onscroll="count_visitor()">
+
+   <script type="text/javascript">
+      var visitor_counted = false;
+
+      function count_visitor() {
+
+         if (!visitor_counted) {
+            http_get('/visitor_counter.php')
+            visitor_counted = true;
+            document.body.setAttribute('onscroll', '');
+         }
+      }
+
+      function http_get(url) {
+         var xml_http = new XMLHttpRequest();
+         xml_http.open("GET", url, false); // false for synchronous request
+         xml_http.send(null);
+         return xml_http.responseText;
+      }
+   </script>
+
    <div class="wrapper">
 
       <div class="apertures-wrapper">
@@ -51,13 +74,19 @@
             <h1 class="me">me</h1>
          </div>
 
-<div class="buttons">
+         <div class="buttons">
 
-   <button type="button" onclick="window.location.href = 'https://paypal.me/zarabirsha'" name="button"><h3>paypal.me</h3></button>
-   <button type="button" onclick="window.location.href = 'https://www.reddit.com/r/Lightme'" name="button"><h3>subreddit</h3></button>
-   <button type="button" onclick="window.location.href = 'https://testflight.apple.com/join/TJnMtQt4'" name="button"><h3>iOS Beta</h3></button>
+            <button type="button" onclick="window.location.href = 'https://paypal.me/zarabirsha'" name="button">
+               <h3>paypal.me</h3>
+            </button>
+            <button type="button" onclick="window.location.href = 'https://www.reddit.com/r/Lightme'" name="button">
+               <h3>subreddit</h3>
+            </button>
+            <button type="button" onclick="window.location.href = 'https://testflight.apple.com/join/TJnMtQt4'" name="button">
+               <h3>iOS Beta</h3>
+            </button>
 
-</div>
+         </div>
 
       </div>
    </div>
