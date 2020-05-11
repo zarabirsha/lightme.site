@@ -39,7 +39,9 @@ h6 {
    transform: translateY(-50%);
 }
 
-h6, .apertures, .shutterspeeds {
+h6,
+.apertures,
+.shutterspeeds {
    font-size: 2.2vh;
    font-weight: bold;
    font-family: ui-sans-serif;
@@ -58,7 +60,10 @@ h6, .apertures, .shutterspeeds {
 }
 
 @media screen and (min-device-width:768px) {
-   h6, .apertures, .shutterspeeds {
+
+   h6,
+   .apertures,
+   .shutterspeeds {
       font-weight: bold;
       font-size: 2vh;
    }
@@ -106,7 +111,8 @@ div.title {
       padding-left: 1vmin;
    }
 
-   .shutterspeeds, .apertures {
+   .shutterspeeds,
+   .apertures {
       font-weight: 400;
    }
 }

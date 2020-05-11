@@ -9,8 +9,6 @@ if (!$handle) {
 
 fclose($handle) ;
 
-
-
 $ip=$_SERVER['REMOTE_ADDR'];
 $hash = sha1($_SERVER['HTTP_USER_AGENT'].$ip);
 date_default_timezone_set("Europe/Rome");
@@ -47,6 +45,4 @@ $json_response = json_encode($response);
 echo $json_response;
 
 }
-
-
 ?>
