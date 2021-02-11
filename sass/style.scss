@@ -44,6 +44,7 @@ body {
         font-size: $mobiledescFontSize;
     }
 
+    margin: auto;
 
 }
 
@@ -52,15 +53,19 @@ body {
 
     font-family: $font;
     font-size: $titleFontSize;
-    max-width: 96vmin;
+
 
     @media (max-width: $mobileextreme) {
         font-size: $mobiletitleFontSize;
     }
 
+
+
     justify-content: center;
     text-align: center;
     display: flex;
+
+
 }
 
 .title {

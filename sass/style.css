@@ -2,6 +2,7 @@ body {
   display: grid;
   margin: 0;
   grid-template: "t" 2fr "l" 0.4fr "ll" 0.4fr "n" 1fr "d" auto "f" 1fr/1fr;
+  margin: auto;
 }
 @media (prefers-color-scheme: light) {
   body {
@@ -25,7 +26,6 @@ body {
 .title {
   font-family: Helvetica, sans-serif;
   font-size: 4rem;
-  max-width: 96vmin;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
