@@ -148,6 +148,7 @@ body {
 @media (max-width: 1024px) {
   .tab_item {
     padding: 2rem;
+    border-radius: 2rem;
   }
 }
 

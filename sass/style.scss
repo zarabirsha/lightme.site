@@ -182,6 +182,7 @@ body {
 
     @media (max-width: $mobileextreme) {
         padding: 2rem;
+        border-radius: $mobilebuttonRadius;
     }
 
     background-color: $clear;
