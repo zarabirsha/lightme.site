@@ -6,88 +6,131 @@
    <title>Lightme</title>
    <meta name="viewport" content="user-scalable=no" />
 
-   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" type="text/css" href="sass/style.css">
 </head>
 
-<body ontouchstart="" onscroll="count_visitor()">
+<body ontouchstart="" onscroll="count_visitor()" onload="select('lightmeter')">
 
-   <script type="text/javascript">
+   <script type=" text/javascript">
       var visitor_counted = false;
 
       function count_visitor() {
-
          if (!visitor_counted) {
-            http_get('/visitor_counter.php')
-            visitor_counted = true;
+            http_get('/visitor_counter.php') visitor_counted = true;
             document.body.setAttribute('onscroll', '');
          }
       }
 
-      function http_get(url) {
+      function
+      http_get(url) {
          var xml_http = new XMLHttpRequest();
          xml_http.open("GET", url, false); // false for synchronous request
          xml_http.send(null);
          return xml_http.responseText;
       }
    </script>
-
-   <div class="wrapper">
-
-      <div class="apertures-wrapper">
-         <div class="apertures">
-            1.4<br>
-            <h6 class="dark-gold">•<br>•</h6>2<br>
-            <h6 class="dark-gold">•<br>•</h6>2.8<br>
-            <h6 class="dark-gold">•<br>•</h6>4<br>
-            <h6 class="dark-gold">•<br>•</h6>5.6<br>
-            <h6 class="dark-gold">•<br>•</h6>
-            8<br>
-            <h6 class="dark-gold">•<br>•</h6>11<br>
-            <h6 class="dark-gold">•<br>•</h6>16<br>
-            <h6 class="dark-gold">•<br>•</h6>22
-         </div>
-
-      </div>
-      <div class="shutterspeeds">
-         4000<br>
-         <h6 style="color:gray;font-weight: 400;">•<br>•</h6>2000<br>
-         <h6 style="color:gray;font-weight: 400;">•<br>•</h6>1000<br>
-         <h6 style="color:gray;font-weight: 400;">•<br>•</h6>500<br>
-         <h6 style="color:gray;font-weight: 400;">•<br>•</h6>250<br>
-         <h6 style="color:gray;font-weight: 400;">•<br>•</h6>
-         125<br>
-         <h6 style="color:gray;font-weight: 400;">•<br>•</h6>60<br>
-         <h6 style="color:gray;font-weight: 400;">•<br>•</h6>30<br>
-         <h6 style="color:gray;font-weight: 400;">•<br>•</h6>15<br>
-         <h6 style="color:gray;font-weight: 400;">•<br>•</h6>8<br>
-         <h6 style="color:gray;font-weight: 400;">•<br>•</h6>4<br>
-         <h6 style="color:gray;font-weight: 400;">•<br>•</h6>2<br>
-         <h6 style="color:gray;font-weight: 400;">•<br>•</h6>1s<br>
-         <h6 style="color:gray;font-weight: 400;">•<br>•</h6>2s<br>
-         <h6 style="color:gray;font-weight: 400;">•<br>•</h6>4s
-         <!-- <br>•<br>•<br>8s<br>•<br>•<br>15s<br>•<br>•<br>30s -->
-      </div>
+   <div class="title">
+      <h1 class="light">Light</h1>
+      <h1 class="me">me</h1>
+   </div>
 
 
-      <div class="title">
-         <h1 class="light">Light</h1>
-         <h1 class="me">me</h1>
-      </div>
-
+   <div class="link_buttons" id="comm_links">
       <div class="button" id="button1" onclick="window.location.href = 'https://paypal.me/zarabirsha'" name="button">
-         paypal.me
-      </div>
-      <div class="button" id="button2" onclick="window.location.href = 'https://testflight.apple.com/join/TJnMtQt4'"
-         name="button">
-         beta
+         Support the project
       </div>
 
-      <div class="button" id="button3" onclick="window.location.href = 'https://www.reddit.com/r/Lightme'"
+      <div class="button" id="button2" onclick="window.location.href = 'https://www.reddit.com/r/Lightme'"
          name="button">
-         subreddit
+         Join r/Lightme
+      </div>
+
+      <div class="button" id="button3" onclick="window.location.href = 'https://instagram.com/lightme_app'"
+         name="button">
+         Follow on Instagram
+      </div>
+   </div>
+
+   <div class="tab">
+      <div class="tab_item lightmeter selected" id="lightmeter" onclick="select('lightmeter')">Lightmeter</div>
+      <div class="tab_item logbook" id="logbook" onclick="select('logbook')">Logbook</div>
+   </div>
+   <script>
+      function select(id) {
+         let selected = "selected"
+         if (!document.getElementById(id).classList.contains(selected)) {
+            document.getElementById(id).classList.add(selected)
+         }
+         let otherID = id === "lightmeter" ? "logbook" : "lightmeter"
+         if (document.getElementById(otherID).classList.contains(selected)) {
+            document.getElementById(otherID).classList.remove(selected)
+         }
+
+      }
+   </script>
+   <div class="description " id="description">
+
+      <div class="text" id="lightmeter">
+         Lightme - Lightmeter is a clean, simple to use yet very powerful lightmeter.<br><br>
+         It is optimised for an easy one-handed use, both for left-handed and right-handed users, with the main controls
+         within your thumb's reach, without the fatiguing juggling of your precious smartphone.<br><br>
+         A core distinguishing feature of Lightme - Lightmeter is that - differently from mostof the other apps - it can
+         show multiple combinations of valid settings for aperture and shutterspeed at the same time by working like a -
+         stretched out - old needle and wheel lightmeter. This allows the user to quickly pick the desired settings
+         without having to scroll on a tiny wheel picker. <br><br>
+         The app is designed to be welcoming to people who are just starting out, with a simple one-button use. But it
+         offers many useful and advanced features for the more experienced shooters/users:<br>
+         <ul>
+            <li>Continuous metering (by pressing and holding or double tapping the measure button)</li>
+            <li>Spot metering with a variable zoom (for more precision) which also supports average metering, and a very
+               intuitive implementation of the zone system</li>
+            <li>Automatic reciprocity failure compensation (for 25+ films, if you see exposure times in red, they are
+               being compensated)</li>
+            <li>A dedicated pinhole mode with precise exposure times for user defined apertures (multiple apertures at
+               a time), with the possibility of setting a timer (through a shortcut)</li>
+            <li>Incident light metering with calibration when using the front facing camera</li>
+            <li>And more ...
+         </ul>
+         It also includes some other features that are enjoyable by any kind of user:<br>
+         <ul>
+            <li>Black and white preview</li>
+            <li>The ability to use any of the cameras on your smartphone (swipe left/right on the preview)</li>
+            <li>Multiple presets for your different camera/film/lens setups</li>
+            <li>Framelines for previewing your shot, before setting up your tripod etc.</li>
+            <li>A searchable list of useful tips to make better use of the application's potential</li>
+            <li> A searchable list of more than 70 films to choose from with the possibility of selecting a few
+               favourites</li>
+            <li>Dark mode support and a useful level of customisation</li>
+         </ul>
+
+         You can find even more info in the tips inside the app or you can have a look at full user manual by tapping on
+         manual (in the settings)<br><br>
+         The app is free in all its many functionalities, but it offers In-App-Purchases in order to support the
+         project.<br><br>
+         The only minor perk you can enable only via certain IAPs is the replacement of the Ad button with a label
+         containing the name of your current preset, check under settings -> coffee for more info.<br><br>
+         Don't panic though, even if there's an Ad button it doesn't mean I'm going to show you ads. In fact unless you
+         decide to tap on that button I'm never going to show you any. But if you have a few minutes to spare, watching
+         a few of them sure helps keeping this project alive :) <br><br>
+         Try it, and, if you like it, share it with your friends and consider writing a (mini) review ;)<br><br>
+
+         Have a nice day, and good light!<br><br>
+
+         Giuseppe Bertolini
       </div>
 
    </div>
+   <div class="link_buttons" id="app_links">
+      <div class="button lightmeter-appstore" id="lightmeter-appstore"
+         onclick="window.location.href = 'https://apps.apple.com/us/app/lightme-lightmeter/id1509033790'" name="button">
+         Get Lightme - Lightmeter
+      </div>
+      <div class="button logbook-appstore" id="logbook-appstore"
+         onclick="window.location.href = 'https://testflight.apple.com/join/Ttp6Ah6u'" name="button">
+         Get Lightme - Logbook (beta)
+      </div>
+   </div>
+
 </body>
 
 </html>

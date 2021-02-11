@@ -1,0 +1,172 @@
+$lightGray:#E8E8E8;
+$darkGray:#2A2A2A;
+$almostBlack: #141414;
+$almostWhite: #F5F5F5;
+$cardDark: #1C1C1E;
+$cardLight: #fff;
+$clear:rgba($color: #000000, $alpha: 0.0);
+$titleFontSize: 4rem;
+$buttonRadius:1rem;
+$borderwidth:0.4rem;
+$maxWidth:600px;
+
+$font: Helvetica,
+sans-serif;
+
+body {
+    display: grid;
+    margin: 0;
+
+    grid-template:
+        "t"2fr "l"1fr "n"1fr "d"auto "ll"1fr/ 1fr;
+
+    @media (prefers-color-scheme: light) {
+        background-color: $almostWhite;
+        color: $almostBlack
+    }
+
+    @media (prefers-color-scheme: dark) {
+        background-color: $almostBlack;
+        color: $almostWhite
+    }
+
+
+}
+
+
+.title {
+
+    font-family: $font;
+    font-size: $titleFontSize;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.title {
+    .light {
+        color: $darkGray;
+    }
+
+    .me {
+        color: $lightGray;
+    }
+}
+
+.button {
+    @media (prefers-color-scheme: dark) {
+        background-color: $cardDark;
+    }
+
+    @media (prefers-color-scheme: light) {
+        background-color: $cardLight;
+    }
+
+    font-family: $font;
+    font-weight: bolder;
+    padding: 1rem;
+    margin: 10px;
+    border-radius: $buttonRadius;
+
+
+}
+
+.button:hover {
+    cursor: pointer;
+    opacity: 75%;
+}
+
+.link_buttons {
+
+
+    text-align: center;
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    width: fit-content;
+
+}
+
+.link_buttons#comm_links {
+    grid-row: 2;
+}
+
+.link_buttons#app_links {
+    grid-row: 5;
+}
+
+.tab {
+    grid-row: 3;
+    margin-top: 2rem;
+    text-align: center;
+    margin: auto;
+    display: grid;
+    font-family: $font;
+    font-weight: bolder;
+    width: fit-content;
+
+
+    @media (prefers-color-scheme: dark) {
+        background-color: black;
+        border-color: black;
+    }
+
+    @media (prefers-color-scheme: light) {
+        background-color: white;
+        border-color: white;
+    }
+
+    border: $borderwidth solid;
+    border-radius: $buttonRadius+$borderwidth;
+
+
+    .lightmeter {
+        grid-column: 1;
+        margin: 0;
+    }
+
+    .logbook {
+        grid-column: 2;
+        margin: 0;
+    }
+
+
+}
+
+.tab_item:hover {
+    cursor: pointer;
+    opacity: 75%;
+}
+
+.tab_item {
+    border-radius: $buttonRadius;
+    padding: 1rem;
+    background-color: $clear;
+
+
+}
+
+.tab .selected {
+    @media (prefers-color-scheme: dark) {
+        background-color: $cardDark;
+    }
+
+    @media (prefers-color-scheme: light) {
+        background-color: $cardLight;
+    }
+}
+
+.description {
+    font-family: $font;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    max-width: $maxWidth;
+    justify-content: center;
+    margin: auto;
+
+    .text {
+        color: gray;
+        font-weight: 100;
+    }
+}
