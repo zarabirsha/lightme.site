@@ -20,6 +20,7 @@ $mobilebuttonRadius:2rem;
 $mobileborderwidth:0.8rem;
 $mobilemaxWidth:86vmin;
 
+
 $font: Helvetica,
 sans-serif;
 
@@ -178,6 +179,11 @@ body {
 .tab_item {
     border-radius: $buttonRadius;
     padding: 1rem;
+
+    @media (max-width: $mobileextreme) {
+        padding: 2rem;
+    }
+
     background-color: $clear;
 
 
