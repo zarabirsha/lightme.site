@@ -19,7 +19,7 @@ body {
 }
 @media (max-width: 1024px) {
   body {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 
@@ -166,8 +166,8 @@ body {
 @media (max-width: 1024px) {
   .description {
     max-width: 86vmin;
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 3rem;
+    line-height: 4.5rem;
   }
 }
 .description b {
