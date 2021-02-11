@@ -25,6 +25,7 @@ body {
 .title {
   font-family: Helvetica, sans-serif;
   font-size: 4rem;
+  max-width: 90vmin;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

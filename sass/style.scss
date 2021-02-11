@@ -57,9 +57,10 @@ body {
 
     @media (max-width: $mobileextreme) {
         font-size: $mobiletitleFontSize;
+
     }
 
-
+    max-width: 90vmin;
 
     justify-content: center;
     text-align: center;
