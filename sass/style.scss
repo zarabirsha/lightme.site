@@ -6,9 +6,18 @@ $cardDark: #1C1C1E;
 $cardLight: #fff;
 $clear:rgba($color: #000000, $alpha: 0.0);
 $titleFontSize: 4rem;
+$descFontSize:1rem;
 $buttonRadius:1rem;
 $borderwidth:0.4rem;
 $maxWidth:600px;
+
+$mobileextreme:768px;
+
+$mobiledescFontSize:2rem;
+$mobiletitleFontSize: 8rem;
+$mobilebuttonRadius:2rem;
+$mobileborderwidth:0.8rem;
+$mobilemaxWidth:900px;
 
 $font: Helvetica,
 sans-serif;
@@ -18,7 +27,7 @@ body {
     margin: 0;
 
     grid-template:
-        "t"2fr "l"1fr "ll"1fr "n"0.6fr "d"auto "f"1fr/ 1fr;
+        "t"2fr "l"0.4fr "ll"0.4fr "n"1fr "d"auto "f"1fr/ 1fr;
 
     @media (prefers-color-scheme: light) {
         background-color: $almostWhite;
@@ -38,6 +47,11 @@ body {
 
     font-family: $font;
     font-size: $titleFontSize;
+
+    @media (max-width: $mobileextreme) {
+        font-size: $mobiletitleFontSize;
+    }
+
     justify-content: center;
     text-align: center;
     display: flex;
@@ -81,7 +95,12 @@ body {
 
     text-align: center;
     margin: auto;
-    max-width: 800px;
+    max-width: $maxWidth;
+
+    @media (max-width: $mobileextreme) {
+        max-width: $mobilemaxWidth;
+    }
+
     display: flex;
     width: fit-content;
 
@@ -92,12 +111,11 @@ body {
 }
 
 .link_buttons#app_links {
-    grid-row: 4;
+    grid-row: 3;
 }
 
 .tab {
-    grid-row: 3;
-    margin-top: 2rem;
+    grid-row: 4;
     text-align: center;
     margin: auto;
     display: grid;
@@ -158,15 +176,35 @@ body {
 
 .description {
     font-family: $font;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: $descFontSize;
+    line-height: $descFontSize*1.5;
 
     max-width: $maxWidth;
+
+    @media (max-width: $mobileextreme) {
+        max-width: $mobilemaxWidth;
+        font-size: $mobiledescFontSize;
+        line-height: $mobiledescFontSize*1.5;
+    }
+
     justify-content: center;
     margin: auto;
+    color: gray;
+
+
+    b {
+        font-weight: 600;
+
+        @media (prefers-color-scheme: light) {
+            color: $darkGray
+        }
+
+        @media (prefers-color-scheme: dark) {
+            color: $lightGray
+        }
+    }
 
     .text {
-        color: gray;
         font-weight: 100;
     }
 }
