@@ -17,7 +17,7 @@ $mobiledescFontSize:2rem;
 $mobiletitleFontSize: 8rem;
 $mobilebuttonRadius:2rem;
 $mobileborderwidth:0.8rem;
-$mobilemaxWidth:90vmin;
+$mobilemaxWidth:86vmin;
 
 $font: Helvetica,
 sans-serif;
@@ -37,6 +37,11 @@ body {
     @media (prefers-color-scheme: dark) {
         background-color: $almostBlack;
         color: $almostWhite
+    }
+
+    @media (max-width: $mobileextreme) {
+        max-width: $mobilemaxWidth;
+        font-size: $mobiledescFontSize;
     }
 
 
