@@ -17,7 +17,7 @@ body {
     color: #F5F5F5;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   body {
     font-size: 2.5rem;
   }
@@ -35,7 +35,7 @@ body {
   display: flex;
   margin: auto;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .title {
     font-size: 6rem;
   }
@@ -65,7 +65,7 @@ body {
     background-color: #fff;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .button {
     font-size: 2rem;
     border-radius: 2rem;
@@ -88,7 +88,7 @@ body {
   width: -moz-fit-content;
   width: fit-content;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .link_buttons {
     max-width: 86vmin;
   }
@@ -115,7 +115,7 @@ body {
   border: 0.4rem solid;
   border-radius: 1.4rem;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .tab {
     border: 0.8rem solid;
     border-radius: 2.8rem;
@@ -152,7 +152,7 @@ body {
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .tab_item {
     padding: 2rem;
     border-radius: 2rem;
@@ -181,7 +181,7 @@ body {
   margin: auto;
   color: gray;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .description {
     max-width: 86vmin;
     font-size: 2.5rem;
