@@ -18,7 +18,7 @@ body {
     margin: 0;
 
     grid-template:
-        "t"2fr "l"1fr "n"1fr "d"auto "ll"1fr/ 1fr;
+        "t"2fr "l"1fr "ll"1fr "n"0.6fr "d"auto "f"1fr/ 1fr;
 
     @media (prefers-color-scheme: light) {
         background-color: $almostWhite;
@@ -92,7 +92,7 @@ body {
 }
 
 .link_buttons#app_links {
-    grid-row: 5;
+    grid-row: 4;
 }
 
 .tab {
