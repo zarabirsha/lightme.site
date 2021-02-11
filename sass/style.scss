@@ -142,7 +142,14 @@ body {
     font-family: $font;
     font-weight: bolder;
     width: fit-content;
+    border: $borderwidth solid;
+    border-radius: $buttonRadius+$borderwidth;
 
+    @media (max-width: $mobileextreme) {
+        border: $mobileborderwidth solid;
+        border-radius: $mobilebuttonRadius+$mobileborderwidth;
+
+    }
 
     @media (prefers-color-scheme: dark) {
         background-color: black;
@@ -154,14 +161,7 @@ body {
         border-color: white;
     }
 
-    border: $borderwidth solid;
-    border-radius: $buttonRadius+$borderwidth;
 
-    @media (max-width: $mobileextreme) {
-        border: $mobileborderwidth solid;
-        border-radius: $mobilebuttonRadius+$mobileborderwidth;
-
-    }
 
     .lightmeter {
         grid-column: 1;

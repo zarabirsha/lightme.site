@@ -114,6 +114,12 @@ body {
   border: 0.4rem solid;
   border-radius: 1.4rem;
 }
+@media (max-width: 1024px) {
+  .tab {
+    border: 0.8rem solid;
+    border-radius: 2.8rem;
+  }
+}
 @media (prefers-color-scheme: dark) {
   .tab {
     background-color: black;
@@ -124,12 +130,6 @@ body {
   .tab {
     background-color: white;
     border-color: white;
-  }
-}
-@media (max-width: 1024px) {
-  .tab {
-    border: 0.8rem solid;
-    border-radius: 2.8rem;
   }
 }
 .tab .lightmeter {
