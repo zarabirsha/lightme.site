@@ -189,16 +189,8 @@ body {
 
 .footer {
   font-weight: 100;
+  color: grey;
+  opacity: 80%;
   margin: auto;
-}
-@media (prefers-color-scheme: dark) {
-  .footer {
-    color: #2A2A2A;
-  }
-}
-@media (prefers-color-scheme: light) {
-  .footer {
-    color: #E8E8E8;
-  }
 }
 /*# sourceMappingURL=style.css.map */
