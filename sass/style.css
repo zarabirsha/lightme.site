@@ -33,6 +33,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: auto;
 }
 @media (max-width: 1024px) {
   .title {
