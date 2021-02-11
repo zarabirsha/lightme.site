@@ -92,15 +92,18 @@ body {
         background-color: $cardLight;
     }
 
-    @media (max-width: $mobileextreme) {
-        font-size: $mobileButtonFontSize;
-    }
+
 
     font-family: $font;
     font-weight: bolder;
     padding: 1rem;
     margin: 10px;
     border-radius: $buttonRadius;
+
+    @media (max-width: $mobileextreme) {
+        font-size: $mobileButtonFontSize;
+        border-radius: $mobilebuttonRadius;
+    }
 
 
 }
