@@ -76,7 +76,7 @@ body {
 }
 @media (max-width: 1024px) {
   .link_buttons {
-    max-width: 100vmin;
+    max-width: 98vmin;
   }
 }
 
@@ -157,7 +157,7 @@ body {
 }
 @media (max-width: 1024px) {
   .description {
-    max-width: 100vmin;
+    max-width: 98vmin;
     font-size: 2rem;
     line-height: 3rem;
   }
