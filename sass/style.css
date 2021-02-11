@@ -27,7 +27,7 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .title {
     font-size: 8rem;
   }
@@ -74,7 +74,7 @@ body {
   width: -moz-fit-content;
   width: fit-content;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .link_buttons {
     max-width: 100vmin;
   }
@@ -155,7 +155,7 @@ body {
   margin: auto;
   color: gray;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .description {
     max-width: 100vmin;
     font-size: 2rem;
