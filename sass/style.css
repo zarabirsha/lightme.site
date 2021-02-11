@@ -126,6 +126,12 @@ body {
     border-color: white;
   }
 }
+@media (max-width: 1024px) {
+  .tab {
+    border: 0.8rem solid;
+    border-radius: 2.8rem;
+  }
+}
 .tab .lightmeter {
   grid-column: 1;
   margin: 0;
