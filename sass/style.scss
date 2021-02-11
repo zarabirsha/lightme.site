@@ -52,6 +52,7 @@ body {
 
     font-family: $font;
     font-size: $titleFontSize;
+    max-width: 96vmin;
 
     @media (max-width: $mobileextreme) {
         font-size: $mobiletitleFontSize;
