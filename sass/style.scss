@@ -23,6 +23,7 @@ $font: Helvetica,
 sans-serif;
 
 body {
+    font-family: $font;
     display: grid;
     margin: 0;
 
@@ -220,4 +221,18 @@ body {
     .text {
         font-weight: 100;
     }
+}
+
+.footer {
+    font-weight: 100;
+
+    @media (prefers-color-scheme: dark) {
+        color: $darkGray
+    }
+
+    @media (prefers-color-scheme: light) {
+        color: $lightGray
+    }
+
+    margin: auto;
 }

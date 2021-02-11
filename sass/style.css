@@ -1,4 +1,5 @@
 body {
+  font-family: Helvetica, sans-serif;
   display: grid;
   margin: 0;
   grid-template: "t" 2fr "l" 0.4fr "ll" 0.4fr "n" 1fr "d" auto "f" 1fr/1fr;
@@ -184,5 +185,20 @@ body {
 }
 .description .text {
   font-weight: 100;
+}
+
+.footer {
+  font-weight: 100;
+  margin: auto;
+}
+@media (prefers-color-scheme: dark) {
+  .footer {
+    color: #2A2A2A;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .footer {
+    color: #E8E8E8;
+  }
 }
 /*# sourceMappingURL=style.css.map */
