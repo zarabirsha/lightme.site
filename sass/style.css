@@ -131,7 +131,7 @@ body {
 }
 @media (prefers-color-scheme: light) {
   .tab .selected {
-    background-color: #fff;
+    background-color: #141414;
   }
 }
 
