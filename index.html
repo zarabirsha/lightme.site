@@ -53,24 +53,31 @@
 
    <div class="tab">
       <div class="tab_item lightmeter selected" id="lightmeter" onclick="select('lightmeter')">Lightmeter</div>
-      <div class="tab_item logbook" id="logbook" onclick="select('logbook')">Logbook</div>
+      <div class="tab_item logbook unselected" id="logbook" onclick="select('logbook')">Logbook</div>
    </div>
    <script>
       function select(id) {
          let selected = "selected"
-         if (!document.getElementById(id).classList.contains(selected)) {
-            document.getElementById(id).classList.add(selected)
+         let unselected = "unselected"
+         let lightmeter = "lightmeter"
+         let logbook = "logbook"
+
+         for (el of document.getElementsByClassName(id)) {
+            el.classList.add(selected)
+            el.classList.remove(unselected)
+
          }
          let otherID = id === "lightmeter" ? "logbook" : "lightmeter"
-         if (document.getElementById(otherID).classList.contains(selected)) {
-            document.getElementById(otherID).classList.remove(selected)
-         }
+         for (el of document.getElementsByClassName(otherID)) {
+            el.classList.remove(selected)
+            el.classList.add(unselected)
 
+         }
       }
    </script>
    <div class="description " id="description">
 
-      <div class="text" id="lightmeter">
+      <div class="text lightmeter selected" id="lightmeter">
          <b>Lightme - Lightmeter</b> is a clean, simple to use yet very powerful lightmeter.<br><br>
          It is optimised for an <b>easy one-handed use</b>, both for left-handed and right-handed users, with the main
          controls
@@ -128,6 +135,33 @@
          Have a nice day, and good light!<br><br>
 
          Giuseppe Bertolini
+      </div>
+
+      <div class="text logbook selected" id="logbook">
+         <b>Lightme - Logbook</b> is a clean and powerful tool to record and keep track of your rolls and shots, as well
+         as other gear and consumables that revolves around the process of shooting and developing film.<br>
+         The aim of the project is to build something beautiful, yet very functional and immediate, with the goal of
+         both reducing the effort taken to record each shot/roll as well as allowing a sufficient level of flexibility
+         and covering various scenarios.<br>
+         The app will offer a few key features, together with the main logging activity you may expect from a digital
+         logbook:
+         <ul>
+            <li>
+               The possibility of reviewing the stored information in different aggregated forms, i.e. by allowing to
+               build some interesting graphs/histogams based on field and data filtered according to user-defined
+               criteria.
+            </li>
+            <li>
+               Data export for various "searches" in formats like json or csv
+            </li>
+            <li>
+               A way to keep track of your stock film and developer mixes inventory, with expiring dates and related
+               notifications
+            </li>
+            <li>
+
+            </li>
+         </ul>
       </div>
 
    </div>
