@@ -36,9 +36,7 @@
 
 
    <div class="link_buttons" id="comm_links">
-      <div class="button" id="button1" onclick="window.location.href = 'https://paypal.me/zarabirsha'" name="button">
-         Support the project
-      </div>
+
 
       <div class="button" id="button2" onclick="window.location.href = 'https://www.reddit.com/r/Lightme'"
          name="button">
@@ -50,6 +48,30 @@
          Follow on Instagram
       </div>
    </div>
+   <div class="link_buttons" id="support_links">
+      <div class="button" id="button4" onclick="window.location.href = 'https://paypal.me/zarabirsha'" name="button">
+         Support via Paypal.me
+      </div>
+      <div class="button" id="button5" onclick="copyAdaAddr()" name="button">
+         Send ADA ₳ (tap to copy address)
+      </div>
+
+
+   </div>
+   <div class="link_buttons" id=" ada-address-div">
+      <input type="text" id="ada-address" readonly size="103"
+         value="addr1q9q66s4pdm7hygalj47pe05gp6vtj0jpzrh0yq4xw43dv0kw6wkevce33wc53qrn9fhfmrwq0nj58wj7lc2mcsrqmllqnqeq6j" />
+   </div>
+   <script>
+      function copyAdaAddr() {
+         var copyText = document.getElementById("ada-address");
+         copyText.select();
+         copyText.setSelectionRange(0, 99999);
+         /* Copy the text inside the text field */
+         document.execCommand("copy");
+         alert("Address copied in clipboard :)");
+      }
+   </script>
 
    <div class="tab">
       <div class="tab_item lightmeter selected" id="lightmeter" onclick="select('lightmeter')">Lightmeter</div>
