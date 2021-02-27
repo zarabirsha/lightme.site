@@ -2,7 +2,7 @@ body {
   font-family: Helvetica, sans-serif;
   display: grid;
   margin: 0;
-  grid-template: "t" 5fr "l" 0.4fr "ll" 0.4fr "lll" 0.4fr "n" 2fr "d" auto "f" 1fr/1fr;
+  grid-template: "t" 5fr "l" 0.4fr "ll" 0.4fr "lll" 0.4fr "n" 2fr "d" auto "f" 2fr/1fr;
   margin: auto;
 }
 @media (prefers-color-scheme: light) {
