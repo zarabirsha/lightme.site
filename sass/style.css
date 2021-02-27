@@ -2,7 +2,7 @@ body {
   font-family: Helvetica, sans-serif;
   display: grid;
   margin: 0;
-  grid-template: "t" 2fr "l" 0.4fr "ll" 0.4fr "lll" 0.4fr "lll" 0.3fr "n" 1fr "d" auto "f" 1fr/1fr;
+  grid-template: "t" 5fr "l" 0.4fr "ll" 0.4fr "lll" 0.4fr "n" 2fr "d" auto "f" 1fr/1fr;
   margin: auto;
 }
 @media (prefers-color-scheme: light) {
@@ -94,16 +94,6 @@ body {
   }
 }
 
-.link_buttons input {
-  color: gray;
-  background-color: rgba(0, 0, 0, 0);
-  display: grid;
-}
-
-div#ada-address-div {
-  grid-row: 5;
-}
-
 .link_buttons#comm_links {
   grid-row: 2;
 }
@@ -117,7 +107,7 @@ div#ada-address-div {
 }
 
 .tab {
-  grid-row: 6;
+  grid-row: 5;
   text-align: center;
   margin: auto;
   display: grid;
