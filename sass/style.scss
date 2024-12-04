@@ -1,28 +1,28 @@
-$lightGray:#E8E8E8;
-$darkGray:#2A2A2A;
+$lightGray: #E8E8E8;
+$darkGray: #2A2A2A;
 $almostBlack: #141414;
 $almostWhite: #F5F5F5;
 $cardDark: #1C1C1E;
 $cardLight: #fff;
-$clear:rgba($color: #000000, $alpha: 0.0);
+$clear: rgba($color: #000000, $alpha: 0.0);
 $titleFontSize: 4rem;
-$descFontSize:1rem;
-$buttonRadius:1rem;
-$borderwidth:0.4rem;
-$maxWidth:600px;
+$descFontSize: 1rem;
+$buttonRadius: 1rem;
+$borderwidth: 0.4rem;
+$maxWidth: 600px;
 
-$mobileextreme:1023px;
+$mobileextreme: 1023px;
 
-$mobiledescFontSize:2.5rem;
-$mobileButtonFontSize:2rem;
+$mobiledescFontSize: 2.6rem;
+$mobileButtonFontSize: 2rem;
 $mobiletitleFontSize: 6rem;
-$mobilebuttonRadius:2rem;
-$mobileborderwidth:0.8rem;
-$mobilemaxWidth:86vmin;
+$mobilebuttonRadius: 2rem;
+$mobileborderwidth: 0.8rem;
+$mobilemaxWidth: 86vmin;
 
 
 $font: Helvetica,
-sans-serif;
+    sans-serif;
 
 body {
     font-family: $font;
@@ -30,7 +30,7 @@ body {
     margin: 0;
 
     grid-template:
-        "t"5fr "l"0.4fr "ll"0.4fr "lll"0.4fr "n"2fr "d"auto "f"2fr/ 1fr;
+        "t" 5fr "l" 0.4fr "ll" 0.4fr "lll" 0.4fr "n" 2fr "d" auto "f" 2fr/ 1fr;
 
     @media (prefers-color-scheme: light) {
         background-color: $almostWhite;
@@ -221,6 +221,18 @@ body {
     display: none;
 }
 
+.text {
+    @media (prefers-color-scheme: light) {
+        color: $darkGray
+    }
+
+    @media (prefers-color-scheme: dark) {
+        color: $lightGray
+    }
+
+    font-weight: 100;
+}
+
 .description {
     font-family: $font;
     font-size: $descFontSize;
@@ -236,24 +248,23 @@ body {
 
     justify-content: center;
     margin: auto;
-    color: gray;
+
+
 
 
     b {
         font-weight: 600;
 
         @media (prefers-color-scheme: light) {
-            color: $darkGray
+            color: $almostBlack
         }
 
         @media (prefers-color-scheme: dark) {
-            color: $lightGray
+            color: $almostWhite
         }
     }
 
-    .text {
-        font-weight: 100;
-    }
+
 }
 
 .footer {

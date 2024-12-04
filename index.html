@@ -2,220 +2,222 @@
 <html lang="en" dir="ltr">
 
 <head>
-   <meta charset="utf-8">
-   <title>Lightme</title>
-   <meta name="viewport" content="user-scalable=no" />
+    <meta charset="utf-8">
+    <title>Lightme</title>
+    <meta name="viewport" content="user-scalable=no" />
 
-   <link rel="stylesheet" type="text/css" href="sass/style.min.css">
+    <link rel="stylesheet" type="text/css" href="sass/style.css">
 </head>
 
 <body ontouchstart="" onscroll="count_visitor()" onload="select('lightmeter')">
 
-   <script>
-      var visitor_counted = false;
+    <script>
+        var visitor_counted = false;
 
-      function count_visitor() {
-         if (!visitor_counted) {
-            http_get('/visitor_counter.php');
-            visitor_counted = true;
-            document.body.setAttribute('onscroll', '');
-         }
-      }
+        function count_visitor() {
+            if (!visitor_counted) {
+                http_get('/visitor_counter.php');
+                visitor_counted = true;
+                document.body.setAttribute('onscroll', '');
+            }
+        }
 
-      function http_get(url) {
-         var xml_http = new XMLHttpRequest();
-         xml_http.open("GET", url, false); // false for synchronous request
-         xml_http.send(null);
-         return xml_http.responseText;
-      }
-   </script>
-   <div class="title">
-      <h1 class="light">Light</h1>
-      <h1 class="me">me</h1>
-   </div>
-
-
-   <div class="link_buttons" id="comm_links">
+        function http_get(url) {
+            var xml_http = new XMLHttpRequest();
+            xml_http.open("GET", url, false); // false for synchronous request
+            xml_http.send(null);
+            return xml_http.responseText;
+        }
+    </script>
+    <div class="title">
+        <h1 class="light">Light</h1>
+        <h1 class="me">me</h1>
+    </div>
 
 
-      <div class="button" id="button2" onclick="window.location.href = 'https://www.reddit.com/r/Lightme'"
-         name="button">
-         Join r/Lightme
-      </div>
+    <div class="link_buttons" id="comm_links">
 
-      <div class="button" id="button3" onclick="window.location.href = 'https://instagram.com/lightme_app'"
-         name="button">
-         Follow on Instagram
-      </div>
-   </div>
-   <div class="link_buttons" id="support_links">
-      <div class="button" id="button4" onclick="window.location.href = 'https://paypal.me/zarabirsha'" name="button">
-         Support via Paypal.me
-      </div>
-      <div class="button" id="button5" onclick="copyAdaAddr()" name="button">
-         Send ADA ₳ (tap to copy address)
-      </div>
-   </div>
 
-   <script>
-      function copyStringToClipboard(str) {
-         // Create new element
-         var el = document.createElement('textarea');
-         // Set value (string to be copied)
-         el.value = str;
-         // Set non-editable to avoid focus and move outside of view
-         el.setAttribute('readonly', '');
-         el.style = {
-            position: 'absolute',
-            left: '-9999px'
-         };
-         document.body.appendChild(el);
-         // Select text inside element
-         el.select();
-         // Copy text to clipboard
-         document.execCommand('copy');
-         // Remove temporary element
-         document.body.removeChild(el);
-      }
+        <div class="button" id="button2" onclick="window.location.href = 'https://www.reddit.com/r/Lightme'"
+            name="button">
+            Join r/Lightme
+        </div>
 
-      function copyAdaAddr() {
-         let address =
-            "addr1q8gm6ylacyxmcfl60m4tgvnqwjcp9ukcmy6txxyz52wlgfxw6wkevce33wc53qrn9fhfmrwq0nj58wj7lc2mcsrqmllq5n83hv";
-         copyStringToClipboard(address);
-         alert("Address copied in clipboard :)");
-      }
-   </script>
+        <div class="button" id="button3" onclick="window.location.href = 'https://instagram.com/lightme_app'"
+            name="button">
+            Follow on Instagram
+        </div>
+    </div>
+    <div class="link_buttons" id="support_links">
+        <div class="button" id="button4" onclick="window.location.href = 'https://paypal.me/zarabirsha'" name="button">
+            Support via Paypal
+        </div>
+    </div>
 
-   <div class="tab">
-      <div class="tab_item lightmeter selected" id="lightmeter" onclick="select('lightmeter')">Lightmeter</div>
-      <div class="tab_item logbook unselected" id="logbook" onclick="select('logbook')">Logbook</div>
-   </div>
-   <script>
-      function select(id) {
-         let selected = "selected"
-         let unselected = "unselected"
-         let lightmeter = "lightmeter"
-         let logbook = "logbook"
+    <script>
+        function copyStringToClipboard(str) {
+            // Create new element
+            var el = document.createElement('textarea');
+            // Set value (string to be copied)
+            el.value = str;
+            // Set non-editable to avoid focus and move outside of view
+            el.setAttribute('readonly', '');
+            el.style = {
+                position: 'absolute',
+                left: '-9999px'
+            };
+            document.body.appendChild(el);
+            // Select text inside element
+            el.select();
+            // Copy text to clipboard
+            document.execCommand('copy');
+            // Remove temporary element
+            document.body.removeChild(el);
+        }
+    </script>
 
-         for (el of document.getElementsByClassName(id)) {
-            el.classList.add(selected)
-            el.classList.remove(unselected)
+    <div class="tab">
+        <div class="tab_item lightmeter selected" id="lightmeter" onclick="select('lightmeter')">Lightmeter</div>
+        <div class="tab_item logbook unselected" id="logbook" onclick="select('logbook')">Logbook</div>
+    </div>
+    <script>
+        function select(id) {
+            let selected = "selected"
+            let unselected = "unselected"
+            let lightmeter = "lightmeter"
+            let logbook = "logbook"
 
-         }
-         let otherID = id === "lightmeter" ? "logbook" : "lightmeter"
-         for (el of document.getElementsByClassName(otherID)) {
-            el.classList.remove(selected)
-            el.classList.add(unselected)
+            for (el of document.getElementsByClassName(id)) {
+                el.classList.add(selected)
+                el.classList.remove(unselected)
 
-         }
-      }
-   </script>
-   <div class="description" id="description">
+            }
+            let otherID = id === "lightmeter" ? "logbook" : "lightmeter"
+            for (el of document.getElementsByClassName(otherID)) {
+                el.classList.remove(selected)
+                el.classList.add(unselected)
 
-      <div class="text lightmeter selected" id="lightmeter">
-         <b>Lightme - Lightmeter</b> is a clean, simple to use yet very powerful lightmeter.<br><br>
-         It is optimised for an <b>easy one-handed use</b>, both for left-handed and right-handed users, with the main
-         controls
-         within your thumb's reach, without the fatiguing juggling of your precious smartphone.<br><br>
-         A core distinguishing feature of Lightme - Lightmeter is that - differently from most of the other apps - it
-         can
-         show <b>multiple combinations</b> of valid settings for aperture and shutterspeed at the same time by working
-         like a -
-         stretched out - old needle and wheel lightmeter. This allows the user to quickly pick the desired settings
-         without having to scroll on a tiny wheel picker. <br><br>
-         The app is designed to be welcoming to people who are just starting out, with a simple one-button use. But it
-         offers many useful and advanced features for the more experienced shooters/users:<br>
-         <ul>
-            <li>Continuous metering (by pressing and holding or double tapping the measure button)</li>
-            <li><b>Spot metering</b> with a variable zoom (for more precision) which also supports <b>average
-                  metering</b>,
-               and a
-               very
-               intuitive implementation of the <b>zone system</b></li>
-            <li>Automatic <b>reciprocity failure compensation</b> (for 25+ films, if you see exposure times in red,
-               they
-               are
-               being compensated)</li>
-            <li>A dedicated <b>pinhole mode</b> with precise exposure times for user defined apertures (multiple
-               apertures
-               at
-               a time), with the possibility of setting a timer (through a shortcut)</li>
-            <li><b>Incident light metering</b> with calibration when using the front facing camera</li>
-            <li>And more ...
-         </ul>
-         It also includes some other features that are enjoyable by any kind of user:<br>
-         <ul>
-            <li>Black and white preview</li>
-            <li>The ability to use any of the cameras on your smartphone (swipe left/right on the preview)</li>
-            <li>Multiple <b>presets</b> for your different camera/film/lens setups</li>
-            <li><b>Framelines</b> for previewing your shot, before setting up your tripod etc.</li>
-            <li>A searchable list of useful <b>tips</b> to make better use of the application's potential</li>
-            <li> A searchable list of more than 70 films to choose from with the possibility of selecting a few
-               favourites</li>
-            <li>Dark mode support and a useful level of customisation</li>
-         </ul>
+            }
+        }
+    </script>
+    <div class="description" id="description">
 
-         You can find even more info in the tips inside the app or you can have a look at full <b>user manual</b> by
-         tapping on
-         manual (in the settings)<br><br>
-         The app is <b>free</b> in all its many functionalities, but it offers In-App-Purchases in order to support the
-         project.<br><br>
-         The only minor perk you can enable only via certain IAPs is the replacement of the Ad button with a label
-         containing the name of your current preset, check under settings -> coffee for more info.<br><br>
-         Don't panic though, even if there's an Ad button it doesn't mean I'm going to show you ads. In fact unless you
-         decide to tap on that button I'm never going to show you any. But if you have a few minutes to spare, watching
-         a few of them sure helps keeping this project alive :) <br><br>
-         Try it, and, if you like it, share it with your friends and consider writing a (mini) review ;)<br><br>
+        <div class="text lightmeter selected" id="lightmeter">
+            <b>Lightme - Lightmeter</b> is a clean, simple to use yet very powerful lightmeter.<br><br>
+            It is optimised for an <b>easy one-handed use</b>, both for left-handed and right-handed users, with the
+            main
+            controls
+            within your thumb's reach, without the fatiguing juggling of your precious smartphone.<br><br>
+            A core distinguishing feature of Lightme - Lightmeter is that - differently from most of the other apps - it
+            can
+            show <b>multiple combinations</b> of valid settings for aperture and shutterspeed at the same time by
+            working
+            like a -
+            stretched out - old needle and wheel lightmeter. This allows the user to quickly pick the desired settings
+            without having to scroll on a tiny wheel picker. <br><br>
+            The app is designed to be welcoming to people who are just starting out, with a simple one-button use. But
+            it
+            offers many useful and advanced features for the more experienced shooters/users:<br>
+            <ul>
+                <li>Continuous metering (by pressing and holding or double tapping the measure button)</li>
+                <li><b>Spot metering</b> with a variable zoom (for more precision) which also supports <b>average
+                        metering</b>,
+                    and a
+                    very
+                    intuitive implementation of the <b>zone system</b></li>
+                <li>Automatic <b>reciprocity failure compensation</b> (for 25+ films, if you see exposure times in red,
+                    they
+                    are
+                    being compensated)</li>
+                <li>A dedicated <b>pinhole mode</b> with precise exposure times for user defined apertures (multiple
+                    apertures
+                    at
+                    a time), with the possibility of setting a timer (through a shortcut)</li>
+                <li><b>Incident light metering</b> with calibration when using the front facing camera</li>
+                <li>And more ...
+            </ul>
+            It also includes some other features that are enjoyable by any kind of user:<br>
+            <ul>
+                <li>Black and white preview</li>
+                <li>The ability to use any of the cameras on your smartphone (swipe left/right on the preview)</li>
+                <li>Multiple <b>presets</b> for your different camera/film/lens setups</li>
+                <li><b>Framelines</b> for previewing your shot, before setting up your tripod etc.</li>
+                <li>A searchable list of useful <b>tips</b> to make better use of the application's potential</li>
+                <li> A searchable list of more than 70 films to choose from with the possibility of selecting a few
+                    favourites</li>
+                <li>Dark mode support and a useful level of customisation</li>
+            </ul>
 
-         Have a nice day, and good light!<br><br>
+            You can find even more info in the tips inside the app or you can have a look at full <b>user manual</b> by
+            tapping on
+            manual (in the settings)<br><br>
+            The app is <b>free</b> in all its many functionalities, but it offers In-App-Purchases in order to support
+            the
+            project.<br><br>
+            The only minor perk you can enable only via certain IAPs is the replacement of the Ad button with a label
+            containing the name of your current preset, check under settings -> coffee for more info.<br><br>
+            Don't panic though, even if there's an Ad button it doesn't mean I'm going to show you ads. In fact unless
+            you
+            decide to tap on that button I'm never going to show you any. But if you have a few minutes to spare,
+            watching
+            a few of them sure helps keeping this project alive :) <br><br>
+            Try it, and, if you like it, share it with your friends and consider writing a (mini) review ;)<br><br>
 
-         Giuseppe Bertolini
-      </div>
+            Have a nice day, and good light!<br><br>
 
-      <div class="text logbook unselected" id="logbook">
-         <b>Lightme - Logbook</b> is a clean and powerful tool to record and keep track of your rolls and shots, as well
-         as other gear and consumables that revolves around the process of shooting and developing film.<br><br>
-         The aim of the project is to build something beautiful, yet very functional and immediate, with the goal of
-         both reducing the effort taken to record each shot/roll as well as allowing a sufficient level of flexibility
-         and covering various scenarios.<br><br>
-         The app will offer a few key features, together with the main logging activity you may expect from a digital
-         logbook:
-         <ul>
-            <li>
-               The possibility of reviewing the stored information in different aggregated forms, i.e. by allowing to
-               build some interesting graphs/histogams based on fields and data filtered according to user-defined
-               criteria.
-            </li>
-            <li>
-               Data export for various "searches" in formats like json or csv
-            </li>
-            <li>
-               A way to keep track of your stock film and developer mixes inventory, with expiring dates and related
-               notifications
-            </li>
-            <li>
-               A straight-forward way of keeping track of large format film-holders with three possible states
-               (unloaded, loaded and exposed) and info about either the film or the shot that is inside them.
-            </li>
-            <li>
-               Post development notes for rolls, sheets and shots, also allowing to add a further photo to record also
-               the final results.
-            </li>
-         </ul>
-      </div>
+            Giuseppe Bertolini
+        </div>
 
-   </div>
-   <div class="link_buttons" id="app_links">
-      <div class="button lightmeter-appstore" id="lightmeter-appstore"
-         onclick="window.location.href = 'https://apps.apple.com/us/app/lightme-lightmeter/id1509033790'" name="button">
-         Get Lightme - Lightmeter
-      </div>
-      <div class="button logbook-appstore" id="logbook-appstore"
-         onclick="window.location.href = 'https://apps.apple.com/us/app/lightme-logbook/id1544518308'" name="button">
-         Get Lightme - Logbook
-      </div>
-   </div>
-   <div class="footer">&copy; Giuseppe Bertolini 2021</div>
+        <div class="text logbook unselected" id="logbook">
+            <b>Lightme - Logbook</b> is a clean and powerful tool to record and keep track of your rolls and shots, as
+            well
+            as other gear and consumables that revolves around the process of shooting and developing film.<br><br>
+            The aim of the project is to build something beautiful, yet very functional and immediate, with the goal of
+            both reducing the effort taken to record each shot/roll as well as allowing a sufficient level of
+            flexibility
+            and covering various scenarios.<br><br>
+            The app will offer a few key features, together with the main logging activity you may expect from a digital
+            logbook:
+            <ul>
+                <li>
+                    The possibility of reviewing the stored information in different aggregated forms, i.e. by allowing
+                    to
+                    build some interesting graphs/histogams based on fields and data filtered according to user-defined
+                    criteria.
+                </li>
+                <li>
+                    Data export for various "searches" in formats like json or csv
+                </li>
+                <li>
+                    A way to keep track of your stock film and developer mixes inventory, with expiring dates and
+                    related
+                    notifications
+                </li>
+                <li>
+                    A straight-forward way of keeping track of large format film-holders with three possible states
+                    (unloaded, loaded and exposed) and info about either the film or the shot that is inside them.
+                </li>
+                <li>
+                    Post development notes for rolls, sheets and shots, also allowing to add a further photo to record
+                    also
+                    the final results.
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="link_buttons" id="app_links">
+        <div class="button lightmeter-appstore" id="lightmeter-appstore"
+            onclick="window.location.href = 'https://apps.apple.com/us/app/lightme-lightmeter/id1509033790'"
+            name="button">
+            Get Lightme - Lightmeter
+        </div>
+        <div class="button logbook-appstore" id="logbook-appstore"
+            onclick="window.location.href = 'https://apps.apple.com/us/app/lightme-logbook/id1544518308'" name="button">
+            Get Lightme - Logbook
+        </div>
+    </div>
+    <div class="footer">&copy; Giuseppe Bertolini 2021</div>
 
 </body>
 
